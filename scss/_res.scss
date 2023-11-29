@@ -1,0 +1,96 @@
+
+.res {
+    
+    margin-bottom: 149px;
+    .comp__text {
+        margin-bottom: 66px;
+    }
+    .res__swiper {
+        height: 315px;
+        .swiper-slide {
+            img {
+                width: 100%;
+            }
+            margin-left: 30px;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            .res__h6 {
+                max-width: 254px;
+                @include headings-h6;
+                color: $gray-gray-800;
+            }
+            .res__read {
+                cursor: pointer;
+                img {
+                    width: 24px;
+                }
+                @include headings-h6;
+                color: $brand-primary-bg;
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+    }
+    .res__add {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 149px;
+        padding: 88px 84px;
+        border-radius: 20px;
+        background: linear-gradient(225deg, #F1F1F5 0%, #E4ECF7 100%);
+        .res__add-h2 {
+            max-width: 531px;
+            @include headings-h2;
+            background: linear-gradient(225deg, #29272E 0%, #27272E 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .res__button {
+            @include headings-h5;
+            padding: 14px 25px;
+            border-radius: 5px;
+            border: 1px solid $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(225deg, #FFC656 0%, #F16063 100%);
+            position: relative;
+            color: $white;
+            height: 57px;
+            .res__button--r {
+                @include centerAbs;
+                position: absolute;
+                
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .res .res__add {
+        padding: 22px 21px;
+        flex-direction: column;
+        height: auto;
+    }
+    .res .res__add  .res__button--div {
+        margin: 65px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .res .res__add .res__add-h2 {
+        font-size: 25px;
+    }
+    .res .res__swiper .swiper-slide {
+        max-width: 200px;
+    }
+    
+}
+

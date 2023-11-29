@@ -1,0 +1,97 @@
+.comp {
+    .comp__text {
+        margin-bottom: 72px;
+        .video__palochka {
+            width: 69px;
+            height: 5px;
+            background: $gradient-primary-bg;
+        }
+        .video__title {
+            margin-top: 20px;
+            @include lite--h2;
+            .heavy--title {
+                @include headings-h2;
+            }
+        }
+    }
+
+    .comp__swiper {
+        position: relative;
+        &::after {
+            content: url('../images/decor/Ellipse\ 181.svg');
+            position: absolute;
+            top: -36px;
+            left: 815px;
+            z-index: -1;
+        }
+        position: relative;
+        background: #F7F7FA;
+        height: 80px + 120px;
+        padding: 60px 0;
+        display: flex;
+        margin-bottom: 124px;
+        .swiper-slide {
+            @include noclick;
+            display: flex;
+            justify-content: center;
+            margin-left: 27px;
+            margin-right: 27px;
+        }
+        .comp__pag {
+            position: absolute;
+            top: -32px - 45;
+            right: 81px;
+            display: flex;
+            gap: 22px;
+            .comp__prev, .comp__next {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+            .comp__next {
+                transform: rotate(180deg);
+            }
+            .comp__next svg , .comp__prev svg {
+                transition: all .3s;
+            }
+            .comp__next:hover svg , .comp__prev:hover svg {
+                fill: $brand-primary-bg;
+                stroke-width: 2px;
+                stroke: $white;
+                
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 1060px) {
+    .comp__swiper {
+        .swiper-slide img {
+            width: 150px;
+            
+        }
+    }
+    
+}
+
+@media (max-width: 893px) {
+    .comp .comp__swiper::after {
+        left: 80vw;
+    }
+    .comp .comp__text {
+        margin-bottom: 120px;
+    }
+}
+
+@media (max-width: 495px) {
+    .comp__text .video__title span, .comp__text .video__title .heavy--title{
+        font-size: 25px !important;
+    }
+    .comp .comp__swiper .comp__pag {
+        @include leftAbs ;
+        right: 0;
+    }
+    
+}

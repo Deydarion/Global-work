@@ -1,0 +1,102 @@
+.design {
+    background: #F7F7FA;
+}
+.design__iner {
+    margin-bottom: 97.71px;
+    .comp__text {
+        margin-top: 70.71px;
+        
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+        .video__palochka {
+            width: 69px;
+            height: 5px;
+            
+            background: $gradient-primary-bg;
+        }
+        .video__title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 51px;   
+            margin-top: 20px;
+            @include lite--h2;
+            
+            .heavy--title {
+                @include headings-h2;
+            }
+        }
+    }
+    .design--bl {    
+        .design--color {
+            background: linear-gradient(225deg, #29272E 0%, #27272E 100%);
+        }
+    }
+    .design--blue {    
+        .design--color {
+            background: linear-gradient(225deg, #68DBF2 0.01%, #509CF5 100%);
+        }
+    }
+    .design--red {    
+        .design--color {
+            background: linear-gradient(224deg, #FF92AE 8.18%, #FF3D9A 95.84%);
+        }
+    }
+    .design--gr {    
+        .design--color {
+            background: linear-gradient(225deg, #67E9F1 0%, #24E795 100%);
+        }
+    }
+    .design--ye {    
+        .design--color {
+            background: linear-gradient(225deg, #FFEF5E 0%, #F7936F 100%);
+        }
+    }
+    .design--lock {    
+        .design--color {
+            background:  linear-gradient(225deg, #F76680 0%, #57007B 100%);
+        }
+    }
+    .design__grid {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        .design__b {
+            border: 1px solid #E7DAED;
+            background: #FAFAFA;
+            padding: 59px 33px 39px 34px ;
+            display: flex;
+            gap: 25px;
+            .design__text {
+                .design__h4 {
+                    @include headings-h4;
+                    margin-bottom: 10px;
+                }
+                .design__def {
+                    @include default;
+                    max-width: 453px;
+                    .design--color {
+                        
+                        font-feature-settings: 'salt' on;
+                        @include grad;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 818px) {
+    .design__iner .design__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 484px) {
+    .design__iner .design__grid .design__b .design__text .design__def {
+        font-size: 12px;
+    }
+    .design__iner .design__grid .design__b {
+        padding: 59px 13px 39px 14px;
+    }
+}
