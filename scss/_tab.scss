@@ -1,0 +1,86 @@
+
+.tab {
+    border-bottom: solid 1px #E7DAED;
+    .conteiner {
+        max-width: 1230px - 162px;
+    }
+}
+.tab__iner {
+    .comp__text {
+        margin-bottom: 38px;
+        margin-top: 80px;
+    }
+    
+    .tab__ul {
+        justify-content: center;
+        display: flex;
+        gap: 60px;
+        .tab__li span {
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            @include para-1;
+        }
+    }
+    .tab__block {
+        animation: moving .5s ease;
+        display: none !important;
+        margin-top: 73px;
+        margin-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .tab__b-1 {
+            display: flex;
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .tab__b-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.tab__li--active span {
+    transition: all .3s;
+    position: relative;
+    @include graddient;
+    font-weight: 600;
+    &::after {
+        transition: all .3s;
+        content: '';
+        width: 35%;
+        height: 3px;
+        background: $gradient-primary-bg;
+        border-radius: 3px;
+        position: absolute;
+        bottom: -4px;
+        left: 35%;
+        margin-right: -50%;
+    }
+}
+
+.tab__iner {
+    .tab--active {
+        display: block !important;
+    }
+}
+
+@keyframes moving {
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}    
+}
+
+@media (max-width: 800px) {
+    .tab__iner .tab__ul {
+        flex-wrap: wrap;
+        gap: 5vw;
+    }
+    .tab__iner .tab__block .tab__b-1, .tab__iner .tab__block .tab__b-2 {
+        flex-wrap: wrap;
+    } 
+    .tab__iner .tab__block .tab__b-1 {
+        justify-content: center;
+    }
+}
