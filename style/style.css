@@ -1829,9 +1829,6 @@ html {
 .res .comp__text {
   margin-bottom: 66px;
 }
-.res .res__swiper {
-  height: 315px;
-}
 .res .res__swiper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
