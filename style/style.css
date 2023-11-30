@@ -1833,8 +1833,6 @@ html {
   height: 315px;
 }
 .res .res__swiper .swiper-slide {
-  margin-left: 30px;
-  margin-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1960,8 +1958,8 @@ html {
   .res .res__add .res__add-h2 {
     font-size: 25px;
   }
-  .res .res__swiper .swiper-slide {
-    max-width: 200px;
+  .res .res__swiper {
+    margin: 0 30px;
   }
 }
 .footer__iner {
