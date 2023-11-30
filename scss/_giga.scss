@@ -1,0 +1,183 @@
+.giga__iner {
+    position: relative;
+    
+    .giga__next {
+        position: absolute;
+        top: 303px ;
+        right: 79px;
+        transform: rotate(180deg);
+    }
+    .giga__prev {
+        top: 303px ;
+        left: 79px;
+        position: absolute;
+    } 
+    .giga__next svg , .giga__prev svg {
+        transition: all .3s;
+    }
+    .giga__next:hover svg , .giga__prev:hover svg {
+        fill: $brand-primary-bg;
+        stroke-width: 2px;
+        stroke: $white;
+        
+    }
+    .comp__text {
+         
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+        .video__palochka {
+            width: 69px;
+            height: 5px;
+            
+            background: $gradient-primary-bg;
+        }
+        .video__title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 51px;   
+            margin-top: 20px;
+            @include lite--h2;
+            
+            .heavy--title {
+                @include headings-h2;
+            }
+        }
+        .video__span {
+            text-align: center;
+            max-width: 535px;
+            @include default-lg;
+            
+        }
+    }
+    .giga--block {
+        position: relative;
+        .gal--left {
+            position: absolute;
+            top: -12px;
+            left: -56px + -40px;
+        }
+        .gal--right {
+            position: absolute;
+            top: 109px;
+            right: -56px + -40px;
+        }
+    }
+    .giga__swiper {
+        .swiper-slide {
+            display: flex ;
+            justify-content: center ;
+        }
+        position: relative;
+        width: 535px;
+        height: 181px;
+        margin-bottom: 53px + 12px;
+        overflow: hidden;
+        
+        .video__span {
+            line-height: 36px;
+        }
+    }
+    .giga__swiper2 {
+        .swiper-slide {
+            display: flex ;
+            justify-content: center ;
+        }
+        margin-bottom: 142px;
+        width: 100%;
+        height: 234px;
+        overflow: hidden;
+        .giga__block {
+            max-width: 156px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 13px;
+            height: auto;
+            .giga__b-img {
+                svg {
+                    opacity: 1;
+                    transition: all .3s;
+                    fill: rgba(231, 218, 237, 0.60);
+                }
+                transition: all .3s;
+                width: 85px;
+                height: 85px;
+                border-radius: 85px;
+                flex-shrink: 0; 
+                background: url('../images/person/a9c5df90cf55132a114710192b094769.png') lightgray 50% / cover no-repeat;
+                
+                
+            }
+            .giga__b-stars {
+                display: flex;
+                gap: 5.48px;
+            }
+            .giga__b-name {
+                @include headings-sm;
+                transition: all .3s;
+            }
+            .giga__b-pr {
+                @include salt-h6;
+                transition: all .3s;
+            }
+
+        }
+        .swiper-slide-active {
+            .giga__block {
+                height: 208px;
+                gap: 15px;
+            }
+            .giga__b-name  {
+                @include headings-h5 ;
+            }
+            .giga__b-pr  {
+                @include black-h3;
+            }
+            .giga__b-img {
+                svg {
+                    opacity: 0;
+                }
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 976px) {
+    .gal--left, .gal--right {
+        display: none;
+    }
+    .giga__iner .giga__prev {
+        z-index: 10;
+        top: 653px;
+        left: 33vw;
+    }
+    .giga__iner .giga__next {
+        z-index: 10;
+        top: 653px;
+        right: 33vw;
+    }
+}
+
+
+
+@media (max-width: 588px) {
+    .giga__iner .comp__text .video__span {
+        height: auto;
+        text-wrap: wrap;
+    }
+    .giga__iner .giga__swiper {
+        max-width: 420px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 415px) {
+    .giga__iner .giga__swiper {
+        max-width: 300px;
+        height: 220px;
+    }
+}
