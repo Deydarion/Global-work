@@ -155,10 +155,11 @@ const resComp = new Swiper('.res__swiper', {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
+    spaceBetween: 20,
     
     breakpoints: {
         1030: {
-            slidesPerView: 4.7,
+            slidesPerView: 4.5,
         },
         817: {
             slidesPerView: 3.5,
